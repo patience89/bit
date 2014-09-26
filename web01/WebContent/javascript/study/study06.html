@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<h1>게시판</h1>
+<table>
+<tr>
+<th>1</th>
+<th>1</th>
+<th>1</th>
+<th>1</th>
+<th>1</th>
+</tr>
+<tr>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+</tr>
+</table>
+<hr>
+<h2>게시물 내용</h2>
+<form>
+<table>
+<tr>
+<th>1</th>
+<td><input type="text" id="title"></td>
+</tr>
+<tr>
+<th></th>
+<td><textarea id="content"></textarea></td>
+</tr>
+<tr>
+<th></th>
+<td><input type="text" id="writer"></td>
+</tr>
+<tr>
+<th></th>
+<td><input type="password" id="password"></td>
+</tr>
+
+</table>
+<button type="button" id="btnAdd">add</button>
+<button type="reset" id="btnCancel">cancel</button>
+</form>
+<script>
+var boardList = [];
+
+document.getElementById('btnAdd').onclick=function(event){
+	document.getElementById('title').value,
+	document.getElementById('content').value,
+	document.getElementById('writer').value,
+	document.getElementById('password').value);
+	boardList.push(board);
+	reset();
+	output();	
+}
+function Board(title,content,writer,password){
+	this.title=title;
+	this.content=content;
+	this.writer=writer;
+	this.password=password;
+	this.date=new Date();
+	this.count= 0;
+	
+}
+function reset(){
+	var event = new MouseEvent('click')
+	document.getElementById('')
+
+	}
+</script>
+</body>
+</html>

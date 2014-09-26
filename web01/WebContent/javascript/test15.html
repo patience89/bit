@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>비트 연산</title>
+</head>
+<body>
+<script>
+"use strict";
+
+/*
+ * 
+ >> : 오른쪽으로 이동, 빈칸은 부호 비트로 채운다.
+ >>> : 빈칸은 0으로 채운다.
+ << : 왼쪽으로 이동, 빈칸은 0으로 채운다.
+ */
+ 
+ var a = 10,b=10;
+ console.log(a>>2,b<<2);
+ var c = -10,d=-10,e=-10;
+ console.log(a>>2,d<<2,e>>>3);
+ 
+ /*
+ 논리연산자 bit단위 연산. 비트를 비교.
+ &(and)
+ |(or)
+ ^(xor)
+ ~(not) 
+ */
+ var na=10,nb=7;
+ console.log(na&nb);
+ console.log(na|nb);
+ console.log(na^nb);
+ console.log(~na);
+
+ 
+
+
+
+</script>
+
+</body>
+</html>

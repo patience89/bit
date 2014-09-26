@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>조건문</title>
+</head>
+<body>
+<script>
+"use strict";
+//조건문
+var a=11;
+if(a<=10)
+	console.log("a<=10");
+	console.log("진돗개");
+	//block없어서 if하단 첫번째 문장만출력
+	var b=10;
+	if(b<=10){
+		console.log("a<=10");
+		console.log("개");
+	}
+	var age=49;
+	console.log((age<15)?'어린이':(age<35)?'어른':(age<50)?'청년':'장년');
+
+	console.log("========================================");
+
+	//console.log(8<age?'유아':(14<age?'어린이':35>age?'청년':50>age?'장년':60>age?'중년':'노인');
+	
+	
+
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<script>
+"use strict";
+//arguments.로 함수 넘기기
+tr = $('<tr>');
+
+		$('<td>').html(i).appendTo(tr);
+
+		$('<td>')
+			.appendTo(tr)
+			.append($('<a>')
+					.attr('bno', new String(i))
+					.attr('href', '#')
+					.click(loadBoardDetail)
+					.html(boardList[i].title));	
+
+		$('<td>').html(boardList[i].writer).appendTo(tr);
+
+		$('<td>').html($.toYYYYMMDD(boardList[i].date)).appendTo(tr);
+
+		$('<td>').html(boardList[i].count).appendTo(tr);
+
+		tr.appendTo(tbody);// tbody에 tr을 붙여라.
+		
+		
+		$('<tr>')
+			.appendTo(tbody)
+			.append($('<td>')).html(i))//
+</script>
+
+</body>
+</html>

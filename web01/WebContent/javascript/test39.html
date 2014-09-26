@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>생성자 함수</title>
+</head>
+<body>
+<script>
+"use strict";
+
+//생성자 함수
+//객체 생성 후 호출하는 함수
+//객체에 필요한 변수와 함수를 등록한다.
+//일반적인 용도로 호출하지 않는다.
+//생성자 함수는 자바와 달리 별도의 문법이 존재하지 않는다
+//생성자 함수는 대문자로 이름을 시작.
+
+//일반 객체 생성방식
+var student1={"name":"홍길동","kor":100,"eng":89,"math":100};
+var student2={"name":"임꺽정","kor":10,"eng":69,"math":100};
+var student3={"name":"망나니","kor":20,"eng":59,"math":100};
+
+//
+function makeStudent(v1,v2,v3,v4){
+	var obj={
+			"name":v1,"kor":v2,"eng":v3,"math":v4			
+	};
+	return obj;
+}
+
+//생성자 함수 사용방식
+//생성자 함수의 호출 전제조건: 반드시 new명령을 실행한 후 호출.
+function Student(v1,v2,v3,v4){
+	//this라는 내부 변수에는 new명령으로 만든 객체(의주소)가 존재.
+	this.name = v1;
+	this.kor = v2;
+	this.eng = v3;
+	this.math =v4;
+}
+
+//팩토리 함수사용
+var student4=makeStudent("홍길동",100,20,30);
+var student5=makeStudent("개똥이",20,30,40);
+var student6=makeStudent("오랑캐",30,40,50);
+//생성자 함수 사용
+var student7=new Student("홍길동",100,20,30);
+var student8=new Student("개똥이",20,30,40);
+var student9=new Student("오랑캐",30,40,50);
+
+function displayScore(student){
+	for(var i in student)	{
+		console.log(student[i]);	
+	}
+	console.log("---")
+}
+displayScore(student7);
+displayScore(student8);
+displayScore(student9);
+//생성자 함수는 내부에this 를 사용하기 때문에
+//객체를 생성하지 않고 호출하면 오류가 발생한다.
+//var studentx = Student("오징어",1,2,3,4);//오류
+//이렇게 하면 student 함수의 this는 undefined
+
+
+
+//생성자 함수 사용
+
+</script>
+</body>
+</html>

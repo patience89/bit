@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<script>
+"use strict";
+
+//자바 스크립트에서 제공하는 Object()라는 함수를 사용하여 객체 만들기
+//1) new 라는 명령어로 빈 바구니 생성
+//2) Object()함수를 사용하여 빈 바구니에 기본 변수와 함수 넣기
+
+var calcObj = new Object();
+// var calObj = {}; 상동
+calcObj.result = 0;
+calcObj.plus = function(value){this.result+=value;};
+calcObj.minus = function(value){this.result-=value;};
+calcObj.multiple = function(value){this.result*=value;};
+calcObj.divide = function(value){this.divide/=value;};
+var calObj2 = new Object();
+
+calcObj.plus(10);
+calcObj.minus(7);
+calcObj.multiple(3);
+console.log("result : ", calcObj.result);
+console.log("toString", toString());
+// toString Object()가 빈 객체에 추가한 함수.
+
+</script>
+
+</body>
+</html>

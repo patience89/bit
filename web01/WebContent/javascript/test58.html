@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>event처리 : keyevent</title>
+</head>
+<body>
+
+<!-- <input id="scriptBox" 
+onKeypress="if(event.keyCode ==13){console.log("enter")}"> -->
+
+<input type="text"  id="input1" onkeydown=Enter_Check()>
+<input id="text2" type="text"><br> 
+<script>
+"use strict";
+
+function Enter_Check(){
+    // 엔터키의 코드는 13입니다.
+    console.log(event.key);
+    console.log(event.code);
+    console.log(event.char);
+    console.log(event.charcode);
+    console.log(event.keycode);
+    if(event.keyCode == 13){	
+	 document.getElementById('text2').focus();	
+}
+}
+
+document.getElementById('input1').onchange=function(event){
+	console.log(event.constructor);
+}
+//기존내용에서 바뀌었을때 발생함.//기존내용에서 그대로면 X
+
+
+</script>
+
+</body>
+</html>

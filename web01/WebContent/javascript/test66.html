@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>element 만들기: 값 설정</title>
+</head>
+<body>
+<input type="text" id="input1"><br>
+<p id='p1'></span>
+<script>
+"use strict";
+
+var input1 = document.getElementById('input1');
+var p1 = document.getElementById('p1');
+
+//innerHTML : 엘리먼트의 content설정
+//content 태그사이의 내용
+//input1.innerHTML='뭐';// 출력안됨
+input1.value = '아나콘다';
+
+p1.innerHTML= 'ㅇㅇ';
+</script>
+
+</body>
+</html>

@@ -1,0 +1,27 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>HTML5 Basic</title>
+</head>
+<body>
+    <a href="#alpha">Move to Alpha</a>
+    <a href="#beta">Move to Beta</a>
+    <a href="#gamma">Move to Gamma</a>
+    <hr />
+    <h1 id="alpha">Alpha</h1>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+    <h1 id="beta">Beta</h1>
+    <p>Duis nec risus a ante pellentesque rhoncus at et leo.</p>
+    <h1 id="gamma">Gamma</h1>
+    <p>Nullam porta, felis sit amet porttitor vestibulum.</p>
+
+<script>
+var v1 = document.getElementById("beta");
+v1.innerHTML = "어라";
+//v1이 가리키는 엘리먼트를 사용자가 마우스로 건드리면 블록안의 명령어를 수행
+v1.onclick = function(){
+		alert("경고");
+};
+</script>
+</body>
+</html>

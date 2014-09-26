@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>리스너 등록 : addEnvetListener()/removeEventListener()</title>
+<style>
+div{
+border: 1px solid red;
+}
+p {
+border: 3px dashed blue;
+
+}
+span{
+border:2px solid green
+}
+</style>
+</head>
+<body>
+<div id="d1">d1
+	<div id="d11"><p id="p1">비트<span id="s1">강남</span>교육센터</p></div>
+	<div id="d12"><p id="p2">비트<span id="s2">종로</span>교육센터</p></div>
+</div>
+<div id="d2">
+	<div id="d21"><p id="p3">비트<span id="s3">대전</span>교육센터</p></div>
+	<div id="d22"><p id="p4">비트<span id="s4">부산</span>교육센터</p></div>
+</div>
+
+
+<script>
+
+"use strict";
+//일반적인 방법으로 리스너를 등록하면
+//targeting phase 또는 bubbling phage에서 호출
+//capturing 단계에서 호출되게 하려면
+//이벤트리스너 등록해야됨.
+
+document.getElementById('d1').addEventListener('click',function(event) {
+	console.log('d1....');
+},true);//세번째 파라미터=?캡쳐 단게에 등록할 것인지 여부를 지정
+
+document.getElementById('d11').addEventListener('click',function(event) {
+	console.log('d11....');
+},true);
+
+
+/* document.getElementById('s1').onclick = function(event) {
+  console.log('s1111111');
+  event.stopPropagation(); // 부모로 버블하지 말라!
+}*/
+document.getElementById('s1').addEventListener('click',function(event) {
+	console.log('s1....');
+},false);
+
+
+ 
+
+</script>
+
+</body>
+</html>

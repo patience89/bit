@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+form th{
+	text-align:right;
+	}
+
+</style>
+</head>
+<body>
+<h1>Board List</h1>
+<table id="boardTable" border='1'>
+<tr>
+<th>No</th>
+<th>Title</th><th>Writer</th><th>Date</th><th>Count</th>
+</tr>
+</table>
+<hr>
+<h2>Board Detail</h2>
+<form>
+<table>
+<tr class="detail">
+<th><label>No</label></th>
+<td><input type="text" id="no"></td>
+</tr>
+<tr>
+<th><label>Title</label></th>
+<td><input type="text" id="title"></td>
+</tr>
+<tr>
+<th><label>Content</label></th>
+<td><input type="text" id="content"></input></td>
+</tr>
+<tr>
+<th><label>Writer</label></th>
+<td><input type="text" id="writer"></input></td>
+</tr>
+<tr class="detail">
+<th><label>Password</label></th>
+<td><input type="password" id="password"></td>
+</tr>
+<tr class="create">
+<th><label>등록일</label></th>
+<td><input type="date" id="date"></td>
+</tr>
+</table>
+<button type="button" id="btnAdd" class="create">추가</button>
+<button type="button" id="btnChange" class="detail">변경</button>
+<button type="button" id="btnDelete" class="detail">삭제</button>
+<button type="reset" id="btnCancel">취소</button>
+</form>
+
+<script src='test69_common.js'>	</script>
+<script src='test69.js'></script>
+
+
+</body>
+</html>

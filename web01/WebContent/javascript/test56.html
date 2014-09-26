@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>브라우저 객체들 : histroy</title>
+</head>
+<body>
+
+<button id="btn1">뒤로 </button>
+<button id="btn2">앞으로</button>
+<script>
+//window.history
+"use strict"
+
+for(var key in history){
+	console.log(key + "=>" +history[key]);
+}
+var b1 = document.getElementById('btn1');
+b1.onclick = function(){
+	history.go(www.naver.com);
+};
+document.getElementById('btn2').onclick = function(){
+	history.forward();
+};
+</script>
+
+</body>
+</html>

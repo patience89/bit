@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<input type="text"  id="input1" >
+<script>
+"use strict";
+//arguments.로 함수 넘기기
+
+function test(func){
+	func();
+}
+function func(){
+	console.log("arguments로 함수 넘기기");
+}
+func();
+
+var score =[100,80,60,40,20];
+var result=0;
+function sum(b){
+	for(var i in score){
+		b(score[i]);
+	}
+}
+	
+	sum(function(value){
+		result+=value;
+	});
+	console.log("결과 = "+result);
+	
+	console.log(func.constructor);
+document.getElementById('input1').onchange=function(event){
+ console.log("dfdasf");}
+	
+</script>
+
+</body>
+</html>

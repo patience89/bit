@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+form th{
+text-align:right;}
+</style>
+</head>
+<body>
+<h1>제목</h1>
+<Table border="1">
+<tr>
+<th>no</th>
+<th>title</th>
+<th>writer</th>
+<th>date</th>
+<th>count</th>
+</tr>
+<tr>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+</tr><tr>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+</tr><tr>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+</tr>
+<hr>
+<form>
+<table>
+<tr>
+<th>title</th>
+<td><input type="text" id="title"></td>
+</tr>
+<tr>
+<th>content</th>
+<td><textarea id="content"></textarea></td>
+</tr>
+<tr>
+<th>writer</th>
+<td><input type="text" id="writer"></td>
+</tr>
+<tr>
+<th>password</th>
+<td><input type="password" id="password"></td>
+</tr>
+</table>
+<button type="button" id="btnAdd">Add</button>
+<button type="reset" id="btnCancel">Cancel</button>
+</form>
+<script>
+
+var boardList=[];
+
+document.getElementById('btnAdd').onclick=function(event){
+	var board = new Board(
+	document.getElementById('title').value,
+	document.getElementById('content').value,
+	document.getElementById('writer').value,
+	document.getElementById('password').value);
+
+ boardList.push(board);
+ resetForm();
+ outputBoardList();
+ }
+
+ function Board(title,content,writer,password){
+	 this.title=title;
+	 this.content=content;
+	 this.writer=writer;
+	 this.password=password;
+	 this.date=new Date();
+	 this.count=0;
+ }
+ function resetForm(){
+	 var event=new MouseEvent('click')
+	 document.getElementById('btnCancel').dispatchEvent(event);
+ }
+ function outputBoardList(){
+	 for(var i in boardList)
+		 {
+		 console.log(boardList[i].title);
+		 console.log(boardList[i].content);
+		 console.log(boardList[i].writer);
+		 console.log(boardList[i].password);
+		 console.log(boardList[i].date);
+		 console.log(boardList[i].count);
+		 }
+ }
+
+ 
+
+
+</script>
+</Table>
+
+</body>
+</html>

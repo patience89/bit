@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>String 기타함수들</title>
+</head>
+<body>
+<script>
+"use strict";
+
+//anchor() 문자열에 <a name="">태그를 붙인다.
+var str1 = "다음까까오";
+console.log(str1.anchor('http://www.daum.net'));
+//link() 문자열에 <a href="">태그를 붙인다.
+document.write(str1.link("http://www.naver.com"))
+console.log(str1.link("http:www.naver.com"))
+
+document.write(str1.strike());
+
+//trim():문자열 양쪽 공백을 제거
+var str = "     ok ok nono             ";
+console.log(str.trim());
+console.log("["+str.trimLeft()+"]");
+console.log(str.trimRight());
+
+</script>
+</body>
+</html>

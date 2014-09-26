@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>배열</title>
+</head>
+<body>
+<script>
+"use strict";
+var kor,eng,math,soc,sci, total,aver;
+kor=100, eng=98, math=100, soc=80, sci=70;
+total=kor+eng+math+soc+sci;
+aver = total/5;
+
+console.log(aver);
+
+//배열
+// => 여러 개의 메모리를 연속으로 준비할 때 
+// => java의 ArrayList와 같다.
+
+var score=[];
+score[0]=100;
+score[1]=98
+score[2]=100;
+score[3]=80;
+score[4]=70;
+score[5]=score[0]+score[1]+score[2]+score[3]+score[4];
+score[6]=score[5]/5;
+console.log(score[5],score[6]);
+
+var arr1 = [];
+arr1[0] = 20;
+arr1[10] = 30;
+console.log("arr1 배열의 길이 = ", arr1.length);
+//java 스크립트 배열은 다양하게 저장가능.
+//동적 타입 바인딩.
+
+var arr2 = [];
+arr2[0] = "손놈";
+arr2[1] = "망나니";
+arr2[2] = "kor";
+arr2[3]=100;
+arr2[4]="eng";
+arr2[5]=90;
+arr2[6]="math";
+arr2[7]=80;
+arr2[8]="soc";
+arr2[9]=100;
+arr2[10]="sci";
+arr2[11]=70;
+arr2[12]="총점";
+arr2[13]=arr2[3]+arr2[5]+arr2[7]+arr2[9]+arr2[11];
+
+
+for (var i=0;i<16; i=i+2){
+	console.log(arr2[i]+ ":" + arr2[i+1]);
+}
+
+
+
+
+
+
+
+
+
+
+
+</script>
+
+</body>
+</html>

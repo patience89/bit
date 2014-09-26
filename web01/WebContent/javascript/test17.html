@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>==, ===비교</title>
+</head>
+<body>
+<script>
+"use strict";
+// ==,===연산자
+//암시적 형 변환(묵시적 형 변환)
+//==연산에서 암시적 형변환은 numner로 변환.
+console.log("'false'==0", 'false'==0);
+console.log("0==flase",0=='false');
+console.log("'true'==1",'true'==1);
+console.log("1=='true'",1=='true');
+console.log("'ok'==1",'ok'==1);
+console.log("1=='ok'",1=='ok');
+//두개를 ==연산으로 비교할때는 둘다 number형으로 바꿔서 비교한다.
+
+console.log("'false'==false", 'false' == false)//''빈문자열 제외하고 true
+console.log("100== '100'-> ",100=='100');//true 
+
+var x = '100';
+if(x==100){
+	console.log('x의 값은 100입니다.');
+}//단순 내용만을 비교.
+
+if(x===100){
+	console.log('x의 값은 숫자 100이다.')
+}//내용상 100뿐만 아니라 형검사까지 함.
+
+var y= '오호라';
+if(y==1){
+	console.log('Y는 참이다');	
+}//안됨. true안받음.
+
+console.log("''==false", ''==false);
+console.log("''==false", ''===false);
+console.log("0==false", 0==false);
+console.log("0===false", 0===false);
+
+</script>
+
+</body>
+</html>

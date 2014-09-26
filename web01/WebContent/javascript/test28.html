@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>함수 파라미터 다루기.</title>
+</head>
+<body>
+<script>
+"use strict";
+
+//파라미터는 var을 선언하지 않는다.
+//이유는 파라미터로 올수있는건 변수밖에없어서 따로 정의하지 않음.
+function plus(a,b){	
+	return a+b;
+}
+
+var sum = plus(10,20);
+console.log(sum);
+
+sum = plus(5,20,30,40);//plus에 파라미터가 2개라서
+console.log(sum);				//알규먼트가 여러개 입력해도 파라미터 개숫 만큼만 들어감.
+sum =plus(30); //b파라미터가 undefined이기 때문에 계산이 안됨.
+console.log(sum);//결과 NaN.자바처럼 오버로딩 안됨.
+//arguments가 많은건 가능한데 적은건 X
+</script>
+
+</body>
+</html>

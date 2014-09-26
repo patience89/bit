@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>기타함수</title>
+</head>
+<body>
+<script>
+"use strict";
+
+//JSON.parse(JSON형식의 문자열) : 자바스크립트 객체를 만들어 리턴
+//JSON 규칙
+//1) 키는 반드시 인용부호("키")로 표현
+//2) 문자열은 반드시 인용부호("문자열")로 표현해야 한다.
+//3) 작은 따옴표는 사용하면 안된다.
+var jsonString ='{"name"}:문어,"kor:100","eng:23","math:32"';
+
+
+//JSON.parse
+var obj2 = JSON.parse(jsonString);
+concole.log(obj2.name);
+
+
+
+//JSON.stringify(): JavaScript 값을 JSON 문자열로 변환합니다.
+console.log("---------------");
+var obj
+</script>
+
+</body>
+</html>

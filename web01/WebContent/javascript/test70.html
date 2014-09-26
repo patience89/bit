@@ -1,0 +1,65 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>reference</title>
+
+</head>
+
+<body>
+<script>
+"use strict";
+
+
+function f1(v1){//v1에 넘어온 주소의 값을 받아서
+	v1.age=50; //v1의 주소 밑에있는 age의 값을 50으로 바꿈
+}
+
+
+var obj1 = {name:"홍길동", age:30};//name,age객체를 생성해서
+//obj1에 그 주소를 저장함.
+
+var obj2=obj1;
+var obj3=obj2;
+obj3.age=40;
+
+f1(obj3); //obj3에 저장된 주소를 넘김
+
+
+
+
+console.log(obj1);
+document.write(obj1.name);
+console.log(obj3);
+
+
+replace('a',b)
+a를 b로 대체한다.
+
+
+</script>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

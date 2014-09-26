@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>객체3</title>
+</head>
+<body>
+<script>
+"use strict";
+
+//객체에 함수 저장.
+// 예) 계산기를 객체로 만들기.
+var calcObj={
+		"result":0,
+		"plus":function(value){this.result+=value;},
+		"minus":function(value){this.result-=value;},
+		"multiple":function(value){this.result*=value},
+		"divide":function(value){this.result/=value},	
+};
+		
+calcObj.plus(10);
+calcObj.minus(7);
+calcObj.multiple(3);
+console.log("result : ", calcObj.result);
+
+//객체에는 함수도 저장하고 변수도 저장하고 배열도 저장하고
+//같은 객체네 소속된 멤버를 가리킬 때는 this를 사용.
+//다른 객체는 객체명.name;
+
+</script>
+
+</body>
+</html>

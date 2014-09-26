@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>형변환</title>
+</head>
+<body>
+<script>
+"use strict";
+/*
+ * 형변환 => 값을 특정 데이터 형으로 변환 
+ 1/ boolean
+ 2/ string
+ 3/ number
+ */
+ 
+ //boolean 형 변환 Boolean()
+ console.log("0-> ",Boolean(0));//0외에 모두 true
+ console.log("0-> ",Boolean(0));
+ console.log("2-> ",Boolean(2));
+ console.log("NaN-> ",Boolean(NaN));
+ console.log("''-> ",Boolean(''));//빈문자열''외에 모두 true
+ console.log("'aa'-> ",Boolean('aa'));
+ console.log("Null-> ",Boolean(null));
+ console.log("undefined-> ",Boolean(undefined));
+ 
+ //number형으로 형변환 Number()
+ console.log("Number형변환")
+ console.log("'100'-> ",Number('100'));
+ console.log("'true'-> ",Number(true));
+ console.log("'false'-> ",Number(false));
+ console.log("''-> ",Number(''));
+ console.log("'null'-> ",Number(null));//0
+ console.log("'undefined'-> ",Number('undefined'));//Nan=>숫자가아니다.
+ console.log("'string'-> ",Number(''));
+ console.log("'100$'-> ",Number('100$'));
+ console.log("parseInt'100$'-> ",parseInt('100$'));
+ //string()
+ console.log("String형변환")
+ console.log("'100'-> ",String(100));
+ console.log("'true'-> ",String(true));
+ console.log("'false'-> ",String(false));
+ console.log("'null'-> ",String(null));
+ console.log("'undefined'-> ",String(undefined));
+ console.log("'Nan'-> ",String(NaN));
+
+</script>
+
+</body>
+</html>

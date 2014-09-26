@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>논리 연산자</title>
+</head>
+<body>
+<!-- 
+! => not
+&& => and
+|| => or
+
+ -->
+ 
+
+<script>
+"use strict";
+console.log("!true",!true);
+console.log("!false",!false);
+console.log("true&&true",true&&true);
+console.log("true&&false",true&&false);
+console.log("false&&true",false&&true);
+console.log("false&&false",false&&false);
+console.log("true||true",true||true);
+console.log("true||false",true||false);
+console.log("false||true",false||true);
+console.log("false||false",false||false);
+
+
+var a = true;
+var b = false;
+var r = 0;
+
+var x= a&(r=30);
+console.log(r);
+
+r=0;
+
+var x= a&&(r=30);
+console.log(r);
+
+r=0;
+var x= b&(r=30);
+console.log(r);
+
+r=0;
+var x= b&&(r=30);
+console.log(r);
+
+//b&&(r=30); and문 사용하는 이유. if문 사용하기 귀찮을 때 간단하게.
+//&&,||앞에 것이 true,false인지 확인하고 뒤에 수행할지 결정
+//&,| 앞에 것이 true,false 어떤것이던 뒤에것 까지 확인.
+
+var x1=10, x2=20;
+var x3 = x1&&(x2=30);
+console.log("x2", x2);
+</script>
+
+</body>
+</html>

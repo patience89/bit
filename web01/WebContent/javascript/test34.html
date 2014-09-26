@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<script>
+"use strict";
+//배열은 인덱스를 사용하여 값을 관리
+//객체는 키를 사용하여 관리
+var scoreArray = ["홍길동",100,90,23];
+var scoreObeject={
+		"name":"홍길동",
+		"kor":100,
+		"eng":89,
+		"math":100
+};
+//키가 변수의 이름 짓는 규칙에 따라 작성되었다면
+//인용부호 생략가능.
+//=>  ("이름" :) > (이름 :)
+console.log("===========배열 값 출력");
+console.log("이름",scoreArray[0]);
+console.log("kor",scoreArray[1]);
+console.log("eng",scoreArray[2]);
+console.log("math",scoreArray[3]);
+//객체[키]
+//키는 문자열로 표현하고, 공백이나 특스 문자 모두 사용가능
+
+console.log("===========객체 값 출력");
+console.log("이름",scoreObeject['name']);
+console.log("kor",scoreObeject['kor']);
+console.log("eng",scoreObeject['eng']);
+console.log("math",scoreObeject['math']);
+//객체.키
+//=>키는 변수명 규칙에 따라야 한다.
+//=>변수 이름 짓는 규칙?
+//공백 포함 불가, 문자로 시작(알파벳,$,..)
+console.log("===========객체 값 출력");
+console.log("이름",scoreObeject.name);
+console.log("kor",scoreObeject.kor);
+console.log("eng",scoreObeject.eng);
+console.log("math",scoreObeject.math);
+
+</script>
+
+</body>
+</html>

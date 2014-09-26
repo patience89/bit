@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>element속성추가</title>
+<style>
+
+div{
+border: 1px solid red;
+}
+p {
+border: 3px dashed blue;
+
+}
+span{
+border:2px solid green;
+}
+</style>
+</head>
+<body>
+<script type="text/javascript">
+"use strict";
+//<a href = 'http://www.google.com'>다음</a>
+
+var e1= document.createElement('a');
+e1.href='http://www.google.com';
+e1.innerHTML = '구글';
+//e1.ohora = '치킨너겟';//소스보면 없음.
+//element의 기존 속성값을 설정할 때는
+//일반 객체에 속성 값을 설정하는 방식으로 가능.
+//그러나, 존재하지 않는 속성을 추가할 때는
+//일반 객체에 속성을 설정하는 방식으로 불가능.
+
+//추가 방법
+e1.setAttribute('aha','치즈스틱');
+document.body.appendChild(e1);
+
+var e2= document.createElement('button');//e2에 button을 생성.
+e2.type='button';//e2 button에 버튼속성추가.
+e2.innerHTML = 'test';//<button></button>사이에 출력 될 'test'입력
+document.body.appendChild(e2);//body의 밑에 e2를 추가.
+e2.onclick=function(event){
+	console.log('button click');
+};
+
+console.log(e1.aha);
+console.log(e1.getAttribute('aha'));
+//없는 속성을 추가할 때는 getAttribute();
+//없던것 추가한것을 뽑을 때는 setAttribute();
+</script>
+
+
+</body>
+</html>

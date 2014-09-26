@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>클로져2</title>
+</head>
+<body>
+<script>
+"use strict";
+//함수를 argument로 넘기기.
+function fire(method){
+	method();	
+}
+//1)일반 함수 넘기기
+function myGun(){
+	console.log("따콩");
+}
+fire(myGun);
+//2)익명 함수 넘기기
+fire(function(){
+	console.log("딱콩 딱콩")
+	console.log("두루루루");
+	});
+	
+//사례2
+function compute3(money, interest){
+	var sum = money +interest(money);
+	console.log("원금 + 이자= ",sum );
+}
+console.log("------------------");
+compute3(1000000,function(m){
+	return m*0.021;
+});
+compute3(1000000,function(m){
+	return m*0.035;
+});
+
+</script>
+
+</body>
+</html>

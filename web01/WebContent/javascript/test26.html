@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>자바스크립트 실행순서2</title>
+</head>
+<body>
+<script>
+"use strict";
+/* 각 < script > 태그의 실행순서
+ * => 1) 함수 선언을 먼저 실행한다.
+   => 2) 일반 명령문을 실행한다.
+   => 3> 
+ */
+ //함수선언
+ function f1(){
+	 console.log("f1....");	 
+ }
+ 
+//함수 호출
+f1();
+f2();//실행된다. 함수선언 한 것을 우선 실행하기 때문에.
+f3();//오류. 함수가 정의되어있는 스크립트가 다음 스크립트 이기ㅣㅔ
+			//이위치에서는 정의되어있는 여부를 알 수 없음
+			//실행되려면 동일 스크립트 안에 정의되어야함.
+
+function f2(){
+	 console.log("f2....");
+}
+</script>
+<script>
+//이전 태그에서 선언한 함수 사용가능.
+console.log("두번째 태그");
+f1();
+f2();
+f3();
+
+function f3(){
+	
+	console.log("f3....");
+}
+</script>
+<script>
+console.log("세번째 태그");
+f1();
+f2();
+
+
+</script>
+
+</body>
+</html>

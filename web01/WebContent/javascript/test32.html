@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>closure3</title>
+</head>
+<body>
+<script>
+"use strict";
+
+var score =[100,80,60,40,20];
+
+//문제 :5개 과목의 성적 합계를 구하시오!
+var result=0;
+for(var i in score)
+	{
+	 result+=score[i];
+	}
+	console.log("합계 : ",result);
+	
+	function each(arr, func){
+		for(var i in arr)
+			{
+			func(arr[i]);
+			}
+	}
+	
+	var result2=0;
+	each(score, function(value){
+		result2+=value;
+	});
+	
+	console.log("result",result);
+	
+	/* 
+	function each(arr,func){
+		for(var i in arr){
+			func(arr[i]);
+		}
+	}
+	
+	var result2=0;
+	each(score, function(value){
+		result2+=value;
+	});
+	
+	console.log("result2 :",result2);
+	
+	function each(arr,func){
+		for(var x in score)
+			{
+			func(x,score[x]);
+			}
+	}
+	var result3=0;
+	each(score,function(index,value){
+		result+=value;
+	});
+	console.log("result3= ",result3);
+	
+	////
+		function each(arr,func){
+		for(var i in score){
+			func(i,score[i]);
+		}
+	}
+	
+	var result4=0;
+	each(score, function(index, value){
+		result4+=value;
+	});
+	console.log("result4 :",result4);
+	
+ */
+	
+	
+	
+	
+</script>
+
+</body>
+</html>

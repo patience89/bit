@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>데이터 타입 바인딩</title>
+</head>
+<body>
+<script>
+"use strict";
+/* 타입 바인딩
+ => 변수의 종류를 정의하는 것.
+ 1. 정적 타입 바인딩
+  =>한번 변수의 종류가 결정되면 바뀌지 않는다. 형이 정해지면 변동이 없음.
+  =>변수를 선언 할 때 결정.
+  예) 자바
+  	int v1, char abc, boolean Tr;
+ 2. 동적 타입 바인딩
+  =>값을 할당 할 때 변수의 종류(타입이 결정)가 결정된다.
+  =>java script는 동적.
+ 
+ */
+ 
+ var v1;
+ var v2;
+ var v3;
+ var v4;
+ var v5;
+ var v6;
+ var v7;
+  
+console.log(typeof(v1));
+console.log(typeof(v2));
+console.log(typeof(v3));
+console.log(typeof(v4));
+console.log(typeof(v5));
+
+v1= 10;
+v2= 3.14;
+v3= "개똥이";
+v4=true;
+v5 = null;
+v6 = {name:"홍길동",age:30};
+v7=function(){};
+
+console.log(typeof(v1));
+console.log(typeof(v2));
+console.log(typeof(v3));
+console.log(typeof(v4));
+console.log(typeof(v5));
+console.log(typeof(v6));
+console.log(typeof(v7));
+
+
+
+</script>
+</body>
+</html>

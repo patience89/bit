@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<h1 id='header1'>제목</h1>
+<p id='p1'>설명들</p>
+
+<h2 id='header2'>제목</h1>
+<p id='p2'>설명들</p>
+
+<h3 id='header3'>제목</h1>
+<p id='p3'>설명들</p>
+
+<h4 id='header4'>제목</h1>
+<p4 id='p4'>설명들</p>
+<script>
+"use strict";
+
+var e1 = document.getElementById('header1');
+console.log(e1.innerHTML);
+
+var tagList = document.getElementsByTagName('h1');
+console.log(tagList.constructor);
+for(var i=0;i<tagList.length;i++){
+	console.log(tagList[i].innerHTML);
+}
+
+//tagList는 배열이 아니라 객체
+//객체인 경우 객체에 등록된 property를 출력
+// 위 반복문 결과와 다르다.
+//태그의 목록을 다루러면 위 형식으로 반복문을 사용하라.
+for(var i in tagList){
+	console.log(tagList[i]);
+}
+console.log('\\\\\\\\\\\\\\\\\\\\\\\\\\\\');
+var h2List = document.getElementsByTagName('h2');
+for(var i=0;i<h2List.length;i++){
+	console.log(h2List[i].innerHTML);
+}
+</script>
+</body>
+</html>

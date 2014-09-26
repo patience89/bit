@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Create</title>
+</head>
+<body>
+<script>
+"use strict";
+
+//Object.create()를 사용하여 객체 생성
+//Object.create(prototype, descriptors)
+//prototype=>필수요수, prototype으로 사용할 개체.null일수있음
+//descriptors=>선택사항, 하나이상의 속성 설명자를 포함하는 javascript 개체
+//descriptors는 defineProperty함수 참조.
+var obj1 =Object.create({},{
+	name:{value:'오징어',writable:true,enumerable:true},
+	kor:{value:23,writable:true,enumerable:true},
+	eng:{value:78,writable:true,enumerable:true},
+	math:{value:69,writable:true,enumerable:true}
+});
+console.log(obj1.name);
+console.log(obj1.kor);
+console.log(obj1.eng);
+console.log(obj1.math);
+
+obj1.eng = 90; 
+obj1.math = 90; 
+
+console.log(obj1.name);
+console.log(obj1.kor);
+console.log(obj1.eng);
+console.log(obj1.math);
+
+console.log("-------------------------");
+for (var key in obj1) {
+  console.log(key);
+}
+
+
+</script>
+
+</body>
+</html>

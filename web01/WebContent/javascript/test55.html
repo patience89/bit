@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<script>
+"use strict";
+
+for(var key in navigator){
+	console.log(key+"=>"+navigator[key]);
+}
+
+//appCodeName:브라우저 코드명
+console.log(navigator.appCodeName);
+//appName:브라우저 이름
+console.log(navigator.appName);
+//appVersion:브러우저 버전
+console.log(navigator.appVersion);
+//platform: 현재 운영체제 정보
+console.log(navigator.platform);
+//userAgent:브라우저 전체정보
+//별거없음 appCodeName+appVersion
+console.log(navigator.userAgent);
+console.log(navigator.constructor);
+/* alert('10+20+30'); */
+
+        var dateFn = "Date(2014,9,24)";
+        var myDate;
+        eval("myDate = new " + dateFn + ";");
+        
+
+        //document.write(myDate);
+        var abc = "1+2+3+4";
+        document.write(eval(abc));
+        document.write(abc);
+</script>
+
+
+</body>
+</html>

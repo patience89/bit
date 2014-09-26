@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<script>
+"use strict";
+//파라미터 = 함수에서 받아오는 값
+//알규먼트 = 함수로 넘겨주는 값
+function displayScore(score){
+	console.log("이름:", score[0]);
+	console.log("국어:", score[1]);
+	console.log("영어:", score[2]);
+	console.log("수학:", score[3]);
+	console.log("과학:", score[4]);
+	console.log("사회:", score[5]);
+}
+function computeTotal(score){
+	var sum=0;
+	for(var i=1;i<6;i++)
+		sum+=score[i];
+	score[6]= sum;
+	}
+function aver(sum, count){
+	return sum/count;
+	
+}
+	
+var s1 = ["용가리", 100, 100, 50 ,80, 90];
+var s2 = ["고질라", 100,90,80,70,60];
+var s3 = ["디워", 70,89,54,23,68];
+
+displayScore(s1);
+computeTotal(s1);
+s1[7]=aver(s1[6],5);
+displayScore(s2);
+computeTotal(s1);
+s2[7]=aver(s2[6],5);
+displayScore(s3);
+computeTotal(s1);
+s3[7]=aver(s3[6],5);
+
+
+</script>
+
+</body>
+</html>

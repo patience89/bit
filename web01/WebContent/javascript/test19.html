@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>switch</title>
+</head>
+<body>
+<script>
+"use strict";
+//switch
+var level = 0;
+
+switch(level){
+case 0:
+	console.log("거지");
+	break;
+case 1:
+	console.log("손놈");
+	break;
+case 2:
+	console.log("손님");
+	break;
+case 3:
+	console.log("사장");
+	break;
+	default:
+		console.log("잡상인");
+}
+var auth = 3;//authentication(인증)사용자존재유무 (로그인)
+							//authorization(권한) 권한 등급
+// 삼항연산자
+// 조건 ? true : false ; 
+
+var t = 16;
+var f = 15;
+var result=0 ;
+result =(t>f)?t:f;
+console.log(result);
+var max=0;
+(t>f) && (max = t);
+console.log(max);
+(t>f) || (max = f);
+console.log(max);
+
+
+
+</script>
+
+</body>
+</html>

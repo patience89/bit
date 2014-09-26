@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>while</title>
+</head>
+<body>
+<script>
+"use strict";
+//while(조건){};
+
+var a=1;
+var result=1;
+
+while(a<5)
+	{
+	a++
+	result *=a;
+	console.log(a,result);
+	};
+		
+	//do while
+	a=1
+	result=1;
+	do{
+			a++;
+			result*=a;
+			console.log(a, result);
+			}while(a<5);
+	console.log("do while 밖 = ",  a, result);
+	
+	//for
+	for(var fo=0;fo<10;fo++){
+		console.log(fo);
+	}	
+	for(var gob=2;gob<10;gob++){
+		for(var saem=1;saem<10;saem++){
+			console.log(gob + "*"+  saem + "=" + (gob*saem));
+		}
+	}
+		
+//for..in
+var arr3=[10,20,30,40,50,60];
+for(var i=0;i<arr3.length;i++){
+	console.log(arr3[i]);
+}
+var i;
+console.log("=======for in=======")
+for(i in arr3)	{
+	console.log(arr3[i]);
+	}
+	console.log("=======for each=======")
+for each (var v in arr3){
+	cosole.log(v);
+}
+	
+	
+
+</script>
+
+</body>
+</html>

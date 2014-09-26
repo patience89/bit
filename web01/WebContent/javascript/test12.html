@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+<!-- html 에서 미리 정의된 상수 값 : entity 
+&nbsp = space
+&lt = less than
+&gt = greater than
+&copy = copy rights;
+&reg = registered trademark
+&amp = ()
+-->
+<input type="text" id="v1">
+<select id="op">
+	<option>>=</option>
+	<option><=</option> <!-- entity => html 상수값, '<' =  &lt -->
+	<option><</option>
+	<option>></option>
+	<option>!=</option>
+	<option>==</option>
+</select>
+<input id="v2" type="text">
+<button id="compute">=</button>
+<input id="result" type="text">
+
+<script>
+"use strict";
+// + , - , *, / , %
+var compute = document.getElementById("compute");
+compute.onclick =function()
+{
+	var e1 = document.getElementById("v1");
+	var e2 = document.getElementById("v2");
+	
+	var a= parseInt(e1.value);//parseInt 없으면 string으로 받아드림.
+	var b= parseInt(e2.value);
+	var op = document.getElementById("op");
+	var result= 0;
+	
+	//else if사용해서 op에 들어있는 연산자가 무엇인가 확인해서 함.
+	//연산자 뽑아오는법을 아는게 빠름.
+	if(op.value ==">=") result = (a>=b);
+	else if(op.value=="<=") result = (a<=b);
+	else if(op.value=="==") result = (a==b);
+	else if(op.value=="!=") result = (a!=b);
+	else if(op.value=="<") result = (a<b);
+	else if(op.value==">") result = (a>b);
+	
+	var e3 = document.getElementById("result");
+	e3.value = result;
+
+
+	};
+
+
+
+
+
+</script>
+
+</body>
+</html>

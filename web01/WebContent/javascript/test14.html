@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>복합할당연산자</title>
+</head>
+<body>
+
+<script>
+"use strict";
+var r=0, s=0;
+var a=10, b=10;
+
+r = ++a; //a의 값을 증가시키고 나서 r에 넣는다. a=a+1 => r = a
+console.log(r,a);//11 11
+s = a++; //s = a => s = s+1
+console.log(s,b);//11 10
+
+a=10;
+a=a++;
+console.log(a);//10
+
+a=10, r=0;
+r= ++a + ++a + ++a;
+	//11  +  12  +  13
+console.log(r, a);
+a=10, r=0;
+r= a++ + a++ + a++;
+  //10  +  11  + 12 
+console.log(r, a);
+</script>
+
+<!-- 
+a += b => a = a + b
+a -= b => a = a - b
+a *= b => a = a * b
+a /= b => a = a / b
+a++
+--a
+ -->
+ 
+ 
+
+
+</body>
+</html>

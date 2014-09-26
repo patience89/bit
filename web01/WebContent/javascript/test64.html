@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>create</title>
+<style>
+
+div{
+border: 1px solid red;
+}
+p {
+border: 3px dashed blue;
+
+}
+span{
+border:2px solid green;
+}
+</style>
+</head>
+<body>
+<h1>신규 게시글</h1>
+<form id='form1'>
+제목 : <input type="text" name='title'><br>
+내용 : <textarea name="content"></textarea><br>
+암호 : <input type="password", name='password'><br>
+<button id = 'btnAdd' type='button'>추가</button>
+<button id = 'btnCancel' type='reset'>취소</button>
+
+<!--button태그의 type을 정하지 않으면 submit타입  
+1)submit : 서버에 폼데이터 전송
+	<form>의 action 속성에 지정된 주소로 폼 데이터를 보낸다.
+	-->
+
+</form>
+&nbsp;
+<script>
+"use strict";
+
+if(document.attachEvent){
+	document.getElementById('btnAdd').attachEvent('onclick',f1);
+	document.getElementById('btnCancel').attachEvent('onclick',f2);
+}
+else{
+	document.getElementById('btnAdd').addEventListener('click',f1);
+	document.getElementById('btnCancel').addEventListener('click',f2);
+}
+
+function f1(event){
+		//document.getElementById('btnAdd').style.display = 'none';
+		//display = 'none' => dom트리에서 숨김.
+		var btnAdd = document.getElementById('btnAdd');
+		document.getElementById('form1').removeChild(btnAdd);
+		
+		var btnUpdate = document.createElement('button');
+		btnUpdate.innerHTMl = '변경';
+};
+function f2(event){
+	//document.getElementById('btnAdd').style.display = '';
+	var btnAdd = document.createElement('button');
+	btnAdd.type = 'button';
+	
+	var btnCancel = document.getElementById('btnCancel');
+	btnAdd.innerHTML = '추가';
+	document.getElementById('form1').insertBefore(btnAdd,btnCancel);
+};
+//
+//dom tag에는 브라우저에 출력될 모든 tag 정보를 갖고있다.
+//display는 잠시 숨긴거.
+//removeChild는 dom tree에서 삭제시킴.
+//appendChild 누구 뒤에 붙이는거.
+//insertBefore(a,b)a버튼을 b앞에 붙여넣음.
+
+
+</script>
+
+</body>
+</html>

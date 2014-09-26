@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>동적 타입 바인딩</title>
+</head>
+<body>
+<script>
+"use stirct"
+//값을 줄 때 마다 다르게 타입이 바뀜. 동적 말그대로 계속 바뀜.
+ function displayVarType(){
+	 console.log(typeof(v1));
+	 console.log(typeof(v2));
+	 console.log(typeof(v3));
+	 console.log(typeof(v4));
+	 console.log(typeof(v5));
+	 console.log(typeof(v6));
+	 console.log(typeof(v7));
+	  
+ }
+var v1,v2,v3,v4,v5,v6,v7;
+v1= 10;
+v2= 3.14;
+v3= "개똥이";
+v4=true;
+v5 = null;
+v6 = {name:"홍길동",age:30};
+v7=function(){};
+
+displayVarType();
+
+v4= 20;
+v5= "aha";
+v6=true;
+v7=500;
+displayVarType();
+
+</script>
+
+</body>
+</html>

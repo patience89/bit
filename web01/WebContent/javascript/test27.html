@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>익명 함수.</title>
+</head>
+<body>
+<script>
+"use strict";
+
+//익명함수 만들기
+//간단해요.
+//function(){};끝.
+//단 익명함수는 이게 불가능해.
+var f1=function() {
+	console.log("f1.....");	
+}//이름 없는 함수는 그 주소를 바로 변수에 저장해야함.
+var f2=function() {
+	console.log("f2.....");
+}
+f1();//함수를 저장한 변수는 함수처럼 사용.
+f2();
+</script>
+
+<script>
+//f3();//오류!호출X 익명함수 정의 된 뒤에 호출가능.
+
+var f3 = function() {
+	console.log("f3....");
+	};//일반 명령문이기에 함수를 f3를 먼저 부른다.
+	//하지만 정의되지 않았기 때문에 불러올수 없음
+	//익명함수는 변수에 저장하는거라서 함수 선언이 아닌
+	//변수 선언.
+	//익명함수는 선언을 하고 난 뒤에 사용가능.
+	console.log("익명함수 정의");
+	console.log(f3());
+	
+	();
+</script>
+
+</body>
+</html>
